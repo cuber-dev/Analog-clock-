@@ -1,0 +1,91 @@
+body {
+   min-height: 100vh;
+   display: flex; 
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+:root{
+  --white: #fff;
+  --black: #000;
+  --theme : #F10E52;
+}
+
+.heading{
+  background: black;
+  color: white;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 10px;
+}
+/* Container styles */
+.clock{
+  position: relative;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  border: 5px solid var(--theme);
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.15),
+            -2px -2px 10px rgba(0,0,0,0.15);
+  margin-bottom: 5rem;
+}
+
+
+/* Number styles */
+.clock label{
+  position: absolute;
+  inset: 15px;
+  text-align: center;
+  transform: rotate(calc(var(--i) * (360deg / 12)));
+}
+.clock label span{
+  font-weight: bold;
+  display : inline-block;
+  transform: rotate(calc(var(--i) * (-360deg / 12)));
+}
+
+
+
+/* Needle styles */
+.clock .indicators{
+  position: absolute;
+  height: 5px;
+  width:5px;
+  border: 2px solid var(--theme);
+  background: var(--theme);
+  border-radius: 50%;
+  display: flex; 
+  justify-content: center;
+}
+
+.indicators  span{
+  position: absolute;
+  bottom:2px;
+  transform-origin: bottom ;
+  z-index: -2;
+}
+.indicators .seconds{
+  width: 2px;
+  height: 110px;
+  background: var(--theme);
+  border-radius: 5px;
+  z-index: 2;
+
+}
+
+.indicators .hours {
+  width: 5px;
+  height: 80px;
+  background: var(--black);
+  border-radius: 5px;
+}
+
+.indicators .minutes {
+  width: 3px;
+  height: 100px;
+  background: var(--black);
+  border-radius: 5px;
+}
