@@ -4,6 +4,8 @@ body {
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 :root{
   --white: #fff;
