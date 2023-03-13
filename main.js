@@ -1,9 +1,10 @@
-
+const root = document.documentElement;
 
 const seconds = document.querySelector('.seconds');
 const hours   = document.querySelector('.hours');
 const minutes = document.querySelector('.minutes');
 
+const themes = document.getElementById('themes');
 
 
 let update = () => {
@@ -18,3 +19,10 @@ let update = () => {
 
 
 setInterval(update,1000);
+
+// Themes
+
+themes.addEventListener('change',() => {
+  let color = themes.value;
+  root.style.setProperty('--theme',color);
+});
