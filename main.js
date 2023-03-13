@@ -6,8 +6,13 @@ const themeBtn = document.getElementById('theme-btn');
 themeBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
   themeBtn.classList.toggle('bi-moon-stars');
-  root.style.setProperty('--text-theme',"white");
+  if (document.body.classList.contains('dark-theme')) {
+    root.style.setProperty('--text-theme', 'white');
+  } else {
+    root.style.setProperty('--text-theme', 'black');
+  }
 });
+
 
 const seconds = document.querySelector('.seconds');
 const hours   = document.querySelector('.hours');

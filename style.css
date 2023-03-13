@@ -18,7 +18,7 @@ body {
   top: 1rem;
   right: 1rem;
   padding:5px 6px;
-  font-size: 20px;
+  font-size: 30px;
   border-radius: 50%;
 }
 .dark-theme{
@@ -110,4 +110,10 @@ body {
 
 #themes{
   font-weight: bold;
+}
+
+@media (max-width: 764px){
+  #theme-btn{
+    font-size: 20px;
+  }
 }
