@@ -1,5 +1,14 @@
 const root = document.documentElement;
 
+const themeBtn = document.getElementById('theme-btn');
+
+//Body -theme
+themeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+  themeBtn.classList.toggle('bi-moon-stars');
+  root.style.setProperty('--text-theme',"white");
+});
+
 const seconds = document.querySelector('.seconds');
 const hours   = document.querySelector('.hours');
 const minutes = document.querySelector('.minutes');

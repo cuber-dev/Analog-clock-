@@ -9,8 +9,21 @@ body {
 }
 :root{
   --white: #fff;
-  --black: #000;
+  --text-theme: #000;
   --theme : #F10E52;
+}
+
+#theme-btn{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding:5px 6px;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.dark-theme{
+  background: black;
+  color: white;
 }
 
 .heading{
@@ -54,44 +67,47 @@ body {
 /* Needle styles */
 .clock .indicators{
   position: absolute;
-  height: 5px;
-  width:5px;
-  border: 2px solid var(--theme);
-  background: var(--theme);
-  border-radius: 50%;
   display: flex; 
   justify-content: center;
 }
-
-.indicators  span{
+.indicators span {
   position: absolute;
-  bottom:2px;
-  transform-origin: bottom ;
-  z-index: -2;
+  bottom: 2px;
+  transform-origin: bottom;
+  z-index: 5;
 }
+
+.indicators .circle{
+  z-index: 15;
+  padding:5px;
+  border-radius: 50%;
+  background: var(--theme);
+  bottom: -2px;
+}
+
 .indicators .seconds{
   width: 2px;
   height: 110px;
   background: var(--theme);
   border-radius: 5px;
-  z-index: 2;
+  z-index: 10;
 
 }
 
 .indicators .hours {
   width: 5px;
   height: 80px;
-  background: var(--black);
+  background: var(--text-theme);
   border-radius: 5px;
 }
 
 .indicators .minutes {
   width: 3px;
   height: 100px;
-  background: var(--black);
+  background: var(--text-theme);
   border-radius: 5px;
 }
 
 #themes{
-  font-weight: bold
+  font-weight: bold;
 }

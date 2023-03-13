@@ -13,12 +13,15 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,600&family=Roboto:wght@500;700&display=swap');
   </style>
 </head>
 
 <body>
+    <i id="theme-btn" class="bi bi-brightness-alt-low-fill"></i>
   <h3 class="heading">=| Analog Clock |=</h3>
     <div class="clock">
       <label style="--i:1"><span>1</span></label>
@@ -38,10 +41,11 @@
          <span class="seconds"></span>
          <span class="hours"></span>
          <span class="minutes"></span>
+         <span class="circle"></span>
       </div>
     </div>
 
-      <div class="themes-div">
+      <div id="themes-div">
         <span>Theme : </span>
         <select id="themes">
           <option value="#EE1141"><span></span> Red</option>
@@ -51,7 +55,7 @@
           <option value="#157FEA"><span></span> Blue</option>
           <option value="grey"><span></span> Grey</option>
           <option value="#2ED149"><span></span> Green</option>
-          <option value="#D12EB6"><span></span> Violet</option>
+          <option value="#D12EB6"><span></span> purple</option>
         </select>
       </div>
   <script src="main.js"></script>
