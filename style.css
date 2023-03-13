@@ -110,6 +110,8 @@ body {
 
 #themes{
   font-weight: bold;
+  background: var(--white);
+  border-radius: 5px;
 }
 
 @media (max-width: 764px){
