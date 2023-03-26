@@ -26,6 +26,9 @@ let update = () => {
   let setSeconds = ((time.getSeconds()) / 60 ) * 360;
   let setHours = ((time.getHours()) / 12) * 360;
   let setMinutes = ((time.getMinutes()) / 60) * 360;
+
+  setHours += ((time.getMinutes()) / 60) * 30;
+  
   seconds.style.transform = `rotate(${setSeconds}deg)`;
   hours.style.transform = `rotate(${setHours}deg)`;
   minutes.style.transform = `rotate(${setMinutes}deg)`;
